@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro";
+import type { RootObject } from "../interfaces/dbData";
+import BlockOne from "../components/home/BlockOne.tsx";
+import BlockOneAbout from "../components/about/BlockOne.astro";
+import MapComponent from "../components/contact/Map.tsx";
+import VideoAnimado from "../components/global/video/VideoAnimado";
+import Directorios from "../components/home/Directorios";
+import ValuesHome from "../components/home/ValuesHome.astro";
+import ServicesHome from "../components/home/ServicesHome2";
+import BlockTwo from "../components/home/BlockTwo.astro";
+import ColorPalette from "../components/home/ColorPalette.astro";
+import Slideshow from "../components/home/Slideshow";
+import ReviewsHome from "../components/reviews/ReviewsHome";
+
+// Realiza la llamada a la API
+const response = await fetch(import.meta.env.API_URL);
+const data: RootObject = await response.json();
+---
+
+<Layout
+  title={`Home | ${data.name}`}
+  description={data.home[0].text}
+  favicon={data.logos.primary}
+  featuredImage={data.logos.favicon}
+  keywords={data.services.map((service) => service.title).join(", ")}
+>
+  <!-- <Slideshow data={data} client:load /> -->
+  <Slideshow data={data} client:only />
+
+  <BlockOne data={data} client:load />
+  {
+    data.videoAnimado.length > 0 ? (
+      <div>
+        <div
+          class="flex justify-center rounded-br-[50px] md:h-[70vh] h-[50vh] relative md:my-2 mt-10 mb-24"
+          style={{
+            background: `url("${data.gallery[2]}")`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+        >
+          {/* Poner un overlay */}
+          <div class="bg-black bg-opacity-70 w-full md:h-[70vh] h-[50vh] absolute" />
+        </div>
+        <div class="mt-[-450px] z-10 relative">
+          <VideoAnimado data={data} />
+        </div>
+      </div>
+    ) : null
+  }
+  <Directorios client:only data={data} />
+  <!-- <section class="w-4/5 mx-auto"><ReviewsHome client:load /></section> -->
+
+  <div class="mb-[-200px] md:pt-16 pt-6">
+    <div class="flex justify-center flex-col text-center">
+      <h2
+        class="text-center md:text-[60px] text-[30px] font-bold text-primary-500 gradient-text"
+      >
+        Need help with a project?
+      </h2>
+      <h2
+        class="md:text-[40px] text-[25px] mb-2 font-bold text-center text-secondary"
+      >
+        {data.slogan[2]}
+      </h2>
+    </div>
+    <ServicesHome
+      dbServices={data.services}
+      landingServices={data.widgets.landingServices}
+      dataglobal={data}
+      onePage={data.widgets.onePages}
+      client:load
+    />
+  </div>
+  <BlockTwo data={data} />
+  <ValuesHome data={data} />
+
+  {data.widgets.colorPalette ? <ColorPalette /> : null}
+  <BlockOneAbout data={data} />
+
+  <MapComponent data={data} client:visible />
+</Layout>
