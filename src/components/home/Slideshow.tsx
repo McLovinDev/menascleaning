@@ -9,22 +9,20 @@ const Slideshow = ({ data }: Props) => {
   return (
     <>
       <div className="pic-wrapper md:rounded-2xl rounded-3xl">
-        <figure
-          className="pic-1"
-          style={{ background: `url("${data.gallery[3]}")` }}
-        ></figure>
-        <figure
-          className="pic-2"
-          style={{ background: `url("${data.gallery[4]}")` }}
-        ></figure>
-        <figure
-          className="pic-3"
-          style={{ background: `url("${data.gallery[5]}")` }}
-        ></figure>
-        <figure
-          className="pic-4"
-          style={{ background: `url("${data.gallery[6]}")` }}
-        ></figure>
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+        >
+          <source
+            src="https://firebasestorage.googleapis.com/v0/b/videos-a7d6e.appspot.com/o/cleaning-near-door-2022-04-15-07-50-22-utc.mp4?alt=media&token=9627f81d-19a8-49e3-b37d-a805eaf81009"
+            type="video/mp4"
+          />
+          {/* Si el video no es compatible */}
+          Your browser does not support the video tag.
+        </video>
+
 
         <div className="z-[9] relative mx-auto md:h-auto h-auto md:py-[150px]  pb-[300px] flex items-center self-center w-full md:flex-row flex-col-reverse justify-center">
           <div className="flex justify-center relative md:pt-[20px] pt-[40px] items-center lg:w-[85%] md:w-[85%] mx-auto flex-wrap md:px-1 px-6">
@@ -69,7 +67,7 @@ const Slideshow = ({ data }: Props) => {
               ))}
             </div>
             <div className="h-[100px] flex items-center justify-center  md:w-[65%] rounded-tl-[80px] rounded-tr-3xl roudned-br-full">
-              <img src="../../../public/assets/img/bg-slider-shape1.png" className="z-[9] absolute md:-bottom-3 bottom-0 md:-right-1 w-full" />
+              <img src="/bg-slider-shape1.png" className="z-[9] absolute md:-bottom-3 bottom-0 md:-right-1 w-full" />
               <span className="gradient-text md:text-[35px] text-[20px] capitalize font-bold flex items-center gap-2 md:w-[80%] w-[90%]">
                 <i className="fa fa-circle text-secondary"></i>
                 <span className="z-10">{data.slogan[0]}</span>
