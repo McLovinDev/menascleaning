@@ -60,7 +60,7 @@ const ReviewsHome: React.FC = () => {
         <div className="p-6 bg-gray-50 rounded-lg ">
             <div className="flex justify-between items-center">
                 <h2 className="text-lg font-bold text-blue-700">
-                    GOOGLE ({overallRating}⭐)
+                    YELP ({overallRating}⭐)
                 </h2>
 
             </div>
