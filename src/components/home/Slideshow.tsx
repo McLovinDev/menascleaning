@@ -16,7 +16,7 @@ const Slideshow = ({ data }: Props) => {
           muted
         >
           <source
-            src="https://firebasestorage.googleapis.com/v0/b/videos-a7d6e.appspot.com/o/cleaning-near-door-2022-04-15-07-50-22-utc.mp4?alt=media&token=9627f81d-19a8-49e3-b37d-a805eaf81009"
+            src={"Stock Video.mp4"}
             type="video/mp4"
           />
           {/* Si el video no es compatible */}
