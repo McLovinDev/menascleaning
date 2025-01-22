@@ -12,7 +12,7 @@ const data: RootObject = await response.json();
   <div class="md:flex flex-col hidden md:mb-[-30px]">
     <div class="w-full bg-gray-100">
       <div
-        class="text-black flex justify-between md:w-[70%] w-full mx-auto py-4 md:px-8 rounded-br-xl rounded-bl-xl items-center font-bold"
+        class="text-black flex justify-between md:w-[70%] w-full mx-auto py-4 md:px-8 rounded-br-xl rounded-bl-xl items-center font-bold "
       >
         <div class="flex gap-6">
           {
@@ -47,7 +47,7 @@ const data: RootObject = await response.json();
                     style={{ color: data.colors.secondaryColor }}
                   />
                   <span>{item.email}</span>
-                </a>
+                </a> 
               );
             })
           }
@@ -55,7 +55,7 @@ const data: RootObject = await response.json();
       </div>
     </div>
     <div
-      class="md:w-[70%] w-full mx-auto py-1 flex items-center justify-between md:px-6 rounded-2xl"
+      class="md:w-[70%] w-full mx-auto py-1 flex items-center justify-between md:px-6 rounded-2xl shadow-lg"
     >
       <img
         src={data.logos.secondary}
@@ -124,7 +124,7 @@ const data: RootObject = await response.json();
         </div>
       </div>
     </div>
-    <div class="flex items-center shadow-lg">
+    <div class="flex items-center ">
       <div class="flex w-full">
         <div class="md:w-[70%] w-full md:h-[70px] bg-primary">
           <div
