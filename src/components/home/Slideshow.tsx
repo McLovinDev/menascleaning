@@ -69,7 +69,7 @@ const Slideshow = ({ data }: Props) => {
               ))}
             </div>
             <div className="h-[100px] flex items-center justify-center  md:w-[65%] rounded-tl-[80px] rounded-tr-3xl roudned-br-full">
-              <img src="/public/assets/img/bg-slider-shape1.png" className="z-[9] absolute md:-bottom-3 bottom-0 md:-right-1 w-full" />
+              <img src="../../../public/assets/img/bg-slider-shape1.png" className="z-[9] absolute md:-bottom-3 bottom-0 md:-right-1 w-full" />
               <span className="gradient-text md:text-[35px] text-[20px] capitalize font-bold flex items-center gap-2 md:w-[80%] w-[90%]">
                 <i className="fa fa-circle text-secondary"></i>
                 <span className="z-10">{data.slogan[0]}</span>
