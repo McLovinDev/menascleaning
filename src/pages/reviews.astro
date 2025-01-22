@@ -2,6 +2,7 @@
 import TransparentHeader from "../components/global/TransparentHeader.astro";
 import type { RootObject } from "../interfaces/dbData";
 import ContentReviews from "../components/reviews/ContentReviews";
+import ReviewsHome from "../components/reviews/ReviewsHome";
 import Layout from "../layouts/Layout.astro";
 const response = await fetch(import.meta.env.API_URL);
 const data: RootObject = await response.json();
@@ -18,7 +19,10 @@ const data: RootObject = await response.json();
   <div
     class="md:w-[75%] mx-auto w-[95%] md:py-24 py-10 flex justify-center flex-col text-center"
   >
-  <review-widget widgetId="2daa6f8d-53f9-4fe0-b3e6-c61064b70d4f"></review-widget>
+    <!-- <review-widget widgetId="2daa6f8d-53f9-4fe0-b3e6-c61064b70d4f"></review-widget> -->
 
+    <section class="w-[90%] mx-auto">
+      <ReviewsHome client:load/>
+    </section>
   </div>
 </Layout>

@@ -3,52 +3,44 @@ import React, { useState } from 'react';
 const ReviewsHome: React.FC = () => {
     const reviews = [
         {
-            author: 'Brandon N.',
-            date: '5/5/2020',
-            location: 'Denver, CO',
-            review: 'DJ’s flooring did an amazing job! David was on time and honest with everything from the beginning. He even beat the price of someone who claimed “free installation”. His guys were extremely quick with install, and did an amazing job! I highly recommend DJ’s Flooring to anyone needing a quick, professional carpet install. 5 stars, guys! Extremely happy.',
+            author: 'Adriana D.',
+            review: 'The management is really good. I will give 5 stars exclusively for them. They had perfect follow up after I fixed the appointment. Overall great work.',
         },
         {
-            author: 'Maureen M.',
-            date: '1/30/2020',
-            location: 'Lakewood, CO',
-            review: 'DJs Flooring did a magnificent job on my flooring project! David returned my call quickly, met with me in a timely fashion, got me a professional quote in writing within 2 hours of my request and did a great job! The work was done professionally, the crew was respectful and efficient while doing the work and they cleaned up their mess immaculately! I will definitely hire DJs Flooring for more flooring projects!',
+            author: 'Jenna T.',
+            review: 'It was great to work with them. The ladies arrived on time and did the job thoroughly. Dressing was neat and the language was clear and professional. Kudos to the management.',
         },
         {
-            author: 'Brittany G.',
-            date: '11/25/2019',
-            location: 'Aurora, CO',
-            review: 'They did an amazing job!',
+            author: 'Michael K.',
+            review: 'Even my pets were not annoyed with their presence. They were caring and loving from the start to the end. The follow up with the customer was very good and impressive. The team arrived with all the equipment in working condition and never asked us for any help. It was a cool meet.',
         },
         {
-            author: 'Pete S.',
-            date: '11/24/2019',
-            location: 'Wheat Ridge, CO',
-            review: 'I originally bought my flooring from Home Depot, and paid for their installation services. But HOM Solutions (Home Depot\'s installation company) couldn\'t do the necessary leveling of the concrete floor in my 60 year old house. A friend recommended DJ\'s to do the leveling, but when David took a look at it, he realized that there was enough leveling to be done that the leveling and installation should be done by the same crew, because they would keep running across areas that needed leveling while they were doing the install. They did such an amazing job with the installation, including checking with me for my preferences on things like the color of the quarter round edging. David\'s customer service was excellent, and the crew were all friendly and professional. They finished the two day job (1000 s.f. of Pergo engineered hardwood) in one day, and came back the second day just to finish with the caulking and edging. I couldn\'t be happier with the new floors, and I will definitely use DJ\'s again if the need arises!',
+            author: 'Miguel F.',
+            review: 'Very glad with the type of service provided. I could see no stains and dusts after the process got completed. The lady was very sweet with us.',
         },
         {
-            author: 'Shelby J.',
-            date: '11/15/2019',
-            location: 'Denver, CO',
-            review: 'DJs Flooring did an awesome job with our carpet. I was able to schedule a consultation right away and the carpet was installed as soon as it was ready. The installers worked hard and did a fantastic job. Would highly recommend DJs Flooring!',
+            author: 'Lisa M.',
+            review: 'Pleased with the way they scheduled my appointment. I can rely on them for all my special occasions. No hidden charges.',
         },
         {
-            author: 'Brianna P.',
-            date: '9/27/2019',
-            location: 'Denver, CO',
-            review: 'DJ\'s Flooring did an amazing job. I love my new floors. Customer service was excellent. I highly recommend.',
+            author: 'Lora W.',
+            review: "Mena's is great! I requested a cleaning service and they replied to me quickly with a confirmation. Henry was great! The cleaning team showed up early and worked super efficiently, thorough, and was very professional. In addition to being great cleaning my apartment, They also had a wonderful personality and were extremely helpful and positive. I highly recommend them-- I will use this company again for sure.",
         },
         {
-            author: 'Jana T.',
-            date: '8/26/2019',
-            location: 'Golden, CO',
-            review: 'DJs flooring replaced our worn-out carpet and tile in our kitchen with beautiful new wood laminate. They were professional, clean, hard-working and priced competitively. Although we could have purchased material on our own for them to install, their product was great quality and came in the color we wanted and looked better than Floor and Decor or other retailers. I would definitely recommend them to anyone looking for a new floor.',
+            author: 'Betty M.',
+            review: 'The cleaners arrived 30 minutes before. Gave good attention to detail. They did everything as per my requests. Wonderful Job. Thank you!',
         },
         {
-            author: 'Cody P.',
-            date: '8/15/2019',
-            location: 'Centennial, CO',
-            review: 'This team did fantastic work, 100%. Extremely respectful, totally focused on their work, kept me up to date on the whole process. David (owner) came and checked in on his guys and progress.. also kept me 100% up to date. The end product looks absolutely amazing. I\'ll be hiring DJ\'s Flooring again when we replace the rest of our flooring in my house shortly.',
+            author: 'Adrian L.',
+            review: 'Thank you for making my place clean and tidy! Workers are punctual, thorough and organized. Highly recommended! 5 stars.',
+        },
+        {
+            author: 'Josepth S.',
+            review: 'After the work they ask for the feedback which is very nice. If there is anything to be done they finish it before the final bill. Thanks for the wonderful service.',
+        },
+        {
+            author: 'Floyd G.',
+            review: 'Regular customer here! I highly recommended this cleaning company! They offer quality cleaning service, their workers are structured and open-minded. 5 stars.',
         },
     ];
 
@@ -91,8 +83,8 @@ const ReviewsHome: React.FC = () => {
                             </div>
                             <div>
                                 <h3 className="font-semibold text-gray-900">{review.author}</h3>
-                                <p className="text-sm text-gray-500">{review.date}</p>
-                                <p className="text-sm text-gray-500">{review.location}</p>
+                                {/* <p className="text-sm text-gray-500">{review.date}</p>
+                                <p className="text-sm text-gray-500">{review.location}</p> */}
                             </div>
                         </div>
                         <div className="mt-2">
